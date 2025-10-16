@@ -1,0 +1,314 @@
+/* --------------------------------------------- */
+/* --- 1. Сброс и Базовые стили --- */
+/* --------------------------------------------- */
+body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+/* Общий контейнер для секций */
+.container {
+    max-width: 1000px; /* Ограничиваем ширину содержимого */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 0 20px; /* Горизонтальные отступы внутри контейнера */
+}
+
+/* --------------------------------------------- */
+/* --- 2. СТИЛИ ШАПКИ (HEADER) --- */
+/* --------------------------------------------- */
+
+.main-header {
+    position: fixed; /* Фиксируем шапку */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; /* Важно для избежания горизонтального сдвига */
+    padding: 15px 40px; 
+    
+    display: flex;
+    justify-content: space-between; /* Распределяем элементы по краям */
+    align-items: center; /* Центрируем по вертикали */
+    
+    background-color: rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    
+    z-index: 100; 
+}
+
+/* Стили Логотипа/Названия */
+.logo-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.2em; /* Увеличенный размер */
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    transition: color 0.3s;
+}
+
+.logo-link:hover {
+    color: #f06292; 
+}
+
+/* Стили Навигации */
+.main-nav {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    margin: 0; /* Убираем возможные внешние отступы */
+    padding: 0;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0; /* Убираем возможные внешние отступы */
+    padding: 0;
+    display: flex;
+    gap: 25px; 
+}
+
+.nav-item {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.3em; /* Увеличенный размер */
+    font-weight: 400;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-item:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #f06292, 0 0 5px rgba(255, 255, 255, 0.5); 
+}
+
+/* --------------------------------------------- */
+/* --- 3. ГЛАВНАЯ СТРАНИЦА (HERO) --- */
+/* --------------------------------------------- */
+
+.homepage-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden;
+    
+    padding-top: 80px; 
+}
+
+/* Фоновое изображение */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; 
+    z-index: 1;
+}
+
+/* Заголовок "Натура" */
+.band-title {
+    position: absolute;
+    top: 35%; /* Поднят выше */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-size: 18vw; 
+    color: rgba(255, 255, 255, 0.85); 
+    font-weight: 700;
+    z-index: 30;
+    pointer-events: none;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 5px rgba(255, 192, 203, 0.5);
+    
+    animation: title-fade-in 1.5s ease-out 1.5s forwards; 
+    opacity: 0;
+}
+
+/* Контейнер участников */
+.members-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    width: 100%;
+    max-width: 1200px;
+    
+    height: 70vh; /* Скорректированная высота */
+    z-index: 20;
+    
+    /* ПОДЪЕМ УЧАСТНИКОВ */
+    margin-top: -10vh; 
+}
+
+/* Элемент участника */
+.member {
+    width: 33%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+    overflow: hidden; 
+}
+
+.member img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.5)); 
+}
+
+/* Центральный участник */
+.member.central {
+    z-index: 25; 
+    transform: translateY(100px) scale(1.25); /* Увеличенный масштаб */
+}
+
+/* --- АНИМАЦИИ --- */
+
+@keyframes member-slide-up {
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes central-slide-up {
+    to { opacity: 1; transform: translateY(0) scale(1.25); } 
+}
+@keyframes title-fade-in {
+    to { opacity: 1; }
+}
+
+.member-1 { animation: member-slide-up 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards; }
+.member-2 { animation: central-slide-up 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s forwards; }
+.member-3 { animation: member-slide-up 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.1s forwards; }
+
+/* --------------------------------------------- */
+/* --- 4. СЕКЦИЯ "О НАС" --- */
+/* --------------------------------------------- */
+
+.about-section {
+    background-color: #1a1a1a; 
+    color: #f0f0f0; 
+    padding: 80px 0; 
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3.5em; 
+    color: #fff;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
+}
+
+.about-text {
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 30px auto; 
+    text-align: left; /* Текст внутри контейнера выравниваем влево */
+}
+/* Сброс центрирования для текста, который обтекает изображение */
+.about-text.text-part-2-float {
+    max-width: none;
+    margin: 0;
+}
+
+/* Контейнеры для изображений */
+.about-images {
+    gap: 30px; 
+    margin-top: 40px;
+    margin-bottom: 40px; 
+    overflow: auto; /* Очистка плавающих элементов (clearfix) */
+}
+.about-images.images-block-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+
+.about-image {
+    object-fit: cover; 
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image:hover {
+    transform: translateY(-5px) scale(1.02); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 192, 203, 0.3); 
+}
+
+/* Новый стиль для обтекания изображения текстом (FLOAT) */
+.image-float-left {
+    float: left; 
+    margin-right: 30px; 
+    margin-bottom: 20px; 
+    
+    width: 400px; 
+    height: 250px; 
+}
+
+/* Стили для изображений в нижней галерее */
+.images-block-2 .about-image {
+    width: 300px; 
+    height: 200px; 
+}
+
+
+/* --------------------------------------------- */
+/* --- 5. МЕДИА-ЗАПРОСЫ (АДАПТИВНОСТЬ) --- */
+/* --------------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Шапка: Исправлено центрирование для мобильного вида */
+    .main-header {
+        flex-direction: column;
+        padding: 10px 20px;
+        align-items: center; 
+    }
+    .main-nav {
+        margin-top: 10px;
+    }
+    .nav-list {
+        gap: 15px;
+    }
+    
+    /* HERO: Корректировка для мобильного */
+    .band-title { font-size: 15vw; top: 30%; }
+    .members-container { height: 55vh; margin-top: -5vh; }
+    
+    /* Секция "О нас": Корректировка для мобильного */
+    .about-section {
+        padding: 50px 0;
+    }
+    .section-title {
+        font-size: 2.5em;
+    }
+    .about-text {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    /* ОТКЛЮЧАЕМ обтекание на мобильных и центрируем изображение */
+    .image-float-left {
+        float: none; 
+        margin: 20px auto; 
+        display: block; 
+        width: 90%; 
+        height: 250px; 
+    }
+    
+    /* Изображения в галерее */
+    .images-block-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .images-block-2 .about-image {
+        width: 90%;
+        height: 200px;
+    }
+}
