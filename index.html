@@ -1,79 +1,341 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Натура — Музыкальная группа</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Натура — Музыкальная группа | Санкт-Петербург</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <header class="main-header">
-        <a href="#" class="logo-link">
-            <span class="logo-text">НАТУРА</span>
-        </a>
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li><a href="#about" class="nav-item">О нас</a></li>
-                <li><a href="#services" class="nav-item">Расценки</a></li>
-                <li><a href="#media" class="nav-item">Медиа</a></li>
-                <li><a href="#contact" class="nav-item">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="homepage-hero">
-        
-        <div class="background-image"></div>
-        
-        <h1 class="band-title">
-            Натура
-        </h1>
 
-        <div class="members-container">
-    
-        <div class="member member-1">
-            <img src="images/member1.png" alt="Участник 1">
-            <audio id="audio-member-1" src="music/sound1.mp3" preload="auto"></audio>
-        </div>
+    <header class="main-header">
+        <div class="header-pill">
+            <a href="#" class="logo-link">НАТУРА</a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#promo" class="nav-item">Промо</a></li>
+                    <li><a href="#about" class="nav-item">О группе</a></li>
+                    <li><a href="#repertoire" class="nav-item">Репертуар</a></li>
+                    <li><a href="#tech" class="nav-item">Тех. райдер</a></li>
+                    <li><a href="#contacts" class="nav-item">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <div class="member member-2 central">
-            <img src="images/member2.png" alt="Участник 2">
-            <audio id="audio-member-2" src="music/sound2.mp3" preload="auto"></audio>
-        </div>
+    <!-- ГЛАВНЫЙ ЭКРАН С ТРЕМЯ УЧАСТНИКАМИ -->
+    <section class="homepage-hero">
+        <div class="hero-header">
+            <span class="hero-badge">Санкт-Петербург • Поп / Русский рок / Инди / Фолк</span>
+            <h1 class="band-title">НАТУРА</h1>
+            <p class="hero-hint">наведи курсор на участника</p>
+        </div>
 
-        <div class="member member-3">
-            <img src="images/member3.png" alt="Участник 3">
-            <audio id="audio-member-3" src="music/sound3.mp3" preload="auto"></audio>
-        </div>
-        
-        </div>     </div>     
-    <section id="about" class="about-section">
-            <div class="container">
-                <h2 class="section-title">О нас</h2>
-                
-                <p class="about-text text-part-1">
-                    Всем привет мы группа Натура и мы занимаемся хуйнёй, но нам это нравится.  ТекстТекстТекстТекстТекстТекст ТекстТекстТекстТекстТекс тТекстТекстТекстТекстТекстТекстТекстТекстТекст ТекстТекстТекстТекстТекстТе яша сосал хуйцы кстТекстТекстТекстТекстТекстТекстТекстТекст
-                </p>
+        <div class="members-container">
+            <!-- Участник 1: Федя -->
+            <div class="member member-1" data-audio="audio-member-1">
+                <div class="member-stage">
+                    <div class="member-arch"></div>
+                    <img src="images/member1.png" alt="Федя — электрогитара" class="member-popout-img" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80'">
+                </div>
+                <div class="member-caption">
+                    <span class="member-name">Федя</span>
+                    <span class="member-role">Электрогитара</span>
+                    <span class="sound-pill">
+                        <span class="sound-dot"></span>
+                        <span class="sound-state">Слушать партию</span>
+                    </span>
+                </div>
+                <audio id="audio-member-1" src="music/sound1.mp3" preload="auto"></audio>
+            </div>
 
-                <div class="about-images images-block-1">
-                    <img src="images/about_1.jpg" alt="Группа Натура 1" class="about-image image-float-left"> 
-                    
-                    <p class="about-text text-part-2-float">
-                        Основанная в 2024 году, группа "Натура" объединила трех талантливых музыкантов с общим видением: творить нечто аутентичное и мощное. Каждый из нас привносит свою уникальную энергию и взгляд, формируя то самое неповторимое звучание, которое уже полюбилось нашим слушателям. Мы верим, что музыка — это универсальный язык, способный соединять сердца и вдохновлять на новые свершения. Присоединяйтесь к нам в этом звуковом приключении!
-                    </p>
-                </div>
-                
-                <div class="about-images images-block-2">
-                    <img src="images/about_2.jpg" alt="Группа Натура 2" class="about-image">
-                    <img src="images/about_3.jpg" alt="Группа Натура 3" class="about-image">
-                </div>
+            <!-- Участник 2: Настя (Центр) -->
+            <div class="member member-2 central" data-audio="audio-member-2">
+                <div class="member-stage">
+                    <div class="member-arch"></div>
+                    <img src="images/member2.png" alt="Настя — вокал" class="member-popout-img" onerror="this.src='https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=600&q=80'">
+                </div>
+                <div class="member-caption">
+                    <span class="member-name">Настя</span>
+                    <span class="member-role">Вокал</span>
+                    <span class="sound-pill">
+                        <span class="sound-dot"></span>
+                        <span class="sound-state">Слушать партию</span>
+                    </span>
+                </div>
+                <audio id="audio-member-2" src="music/sound2.mp3" preload="auto"></audio>
+            </div>
 
-            </div>
-        </section>
+            <!-- Участник 3: Яша -->
+            <div class="member member-3" data-audio="audio-member-3">
+                <div class="member-stage">
+                    <div class="member-arch"></div>
+                    <img src="images/member3.png" alt="Яша — вокал и гитара" class="member-popout-img" onerror="this.src='https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=600&q=80'">
+                </div>
+                <div class="member-caption">
+                    <span class="member-name">Яша</span>
+                    <span class="member-role">Вокал и гитара</span>
+                    <span class="sound-pill">
+                        <span class="sound-dot"></span>
+                        <span class="sound-state">Слушать партию</span>
+                    </span>
+                </div>
+                <audio id="audio-member-3" src="music/sound3.mp3" preload="auto"></audio>
+            </div>
+        </div>
+    </section>
 
-    
-    <script src="app.js"></script>
+    <!-- СЕКЦИЯ ПРОМО И ВИДЕО -->
+    <section id="promo" class="section promo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Живое звучание на вашем событии</h2>
+                <p class="section-lead">
+                    Мы начинали на уличных площадках Петербурга, где внимание каждого прохожего нужно заслужить с первых секунд. Поэтому мы легко раскачиваем как камерные вечеринки, так и большие свадьбы.
+                </p>
+            </div>
+
+            <!-- Главный большой плеер с промо на Rutube -->
+            <div class="featured-video-block">
+                <div class="video-info-bar">
+                    <div>
+                        <span class="card-tag">Главное промо</span>
+                        <h3>Промо-видео группы «Натура»</h3>
+                    </div>
+                    <a href="https://disk.yandex.ru/i/V5sNI0h8mPaHNA" target="_blank" rel="noopener" class="backup-link">Резервная копия на Яндекс.Диске ↗</a>
+                </div>
+                <div class="video-player-wrap">
+                    <iframe 
+                        width="720" 
+                        height="405" 
+                        src="https://rutube.ru/play/embed/a88da8f5147ef46d0a8fb2ec9ee77495" 
+                        allow="clipboard-write; autoplay" 
+                        webkitAllowFullScreen 
+                        mozallowfullscreen 
+                        allowFullScreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Два дополнительных лайв-видео -->
+            <div class="live-videos-grid">
+                <div class="video-card interactive-card">
+                    <div>
+                        <span class="card-tag">Свадьбы и вечеринки</span>
+                        <h3>Live: «Экспонат» (Свадьба)</h3>
+                        <p>Пример того, как гости выходят танцевать под знакомые хиты в живом исполнении.</p>
+                    </div>
+                    <div class="video-player-wrap small-player">
+                        <iframe 
+                            width="720" 
+                            height="405" 
+                            src="https://rutube.ru/play/embed/21d36e0f63fbb33df0c4279f006f7b19" 
+                            allow="clipboard-write; autoplay" 
+                            webkitAllowFullScreen 
+                            mozallowfullscreen 
+                            allowFullScreen>
+                        </iframe>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1abdnMfY5eQJz6ZVy-Uj7la_LiqlGtwJ1/view?usp=drivesdk" target="_blank" rel="noopener" class="backup-link">Резервная копия на Google Drive ↗</a>
+                </div>
+
+                <div class="video-card interactive-card">
+                    <div>
+                        <span class="card-tag">Авторская песня • Live</span>
+                        <h3>Live: «Ну с добрым утром»</h3>
+                        <p>Запись живого выступления с нашей авторской песней.</p>
+                    </div>
+                    <div class="video-player-wrap small-player">
+                        <iframe 
+                            width="720" 
+                            height="405" 
+                            src="https://rutube.ru/play/embed/b68422901e37bfbd29e3c1c385fe3e41" 
+                            allow="clipboard-write; autoplay" 
+                            webkitAllowFullScreen 
+                            mozallowfullscreen 
+                            allowFullScreen>
+                        </iframe>
+                    </div>
+                    <div class="video-links-row">
+                        <a href="https://rutube.ru/shorts/b68422901e37bfbd29e3c1c385fe3e41/" target="_blank" rel="noopener" class="backup-link">Открыть в Rutube Shorts ↗</a>
+                        <a href="https://drive.google.com/file/d/1HW441wf_o4p55mnGFyhWl7otYsr2fXeM/view?usp=drivesdk" target="_blank" rel="noopener" class="backup-link">Google Drive ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="archive-banner interactive-card">
+                <span>Больше записей с сольных концертов и мероприятий собрано в общей папке:</span>
+                <a href="https://disk.yandex.ru/d/q2r7F65aHAaUAw" target="_blank" rel="noopener" class="btn btn-primary">Открыть архив на Яндекс.Диске ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- О НАС И ОПЫТ -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">О коллективе</h2>
+                    <p>
+                        Мы — группа «Натура» из Санкт-Петербурга. Играем авторскую музыку и кавер-программы в жанрах поп, русский рок, инди-рок и акустический фолк.
+                    </p>
+                    <p>
+                        Выступаем на клубных сценах, городских культурных событиях, свадьбах, днях рождения и вечеринках. За плечами десятки выступлений и собственная музыка на всех стриминговых витринах.
+                    </p>
+                    
+                    <div class="venues-box">
+                        <h4>Среди площадок, где мы выступали:</h4>
+                        <div class="venues-pills">
+                            <span class="venue-pill">Кабаре «Shum» (СПб)</span>
+                            <span class="venue-pill">Бар «Реплика» (Колпино)</span>
+                            <span class="venue-pill">Ресторан «Аннушка» (Выборг)</span>
+                            <span class="venue-pill">Свадьбы, дни рождения и вечеринки</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="streaming-box interactive-card">
+                    <h3>Авторская музыка</h3>
+                    <p>Помимо кавер-программы мы выпускаем собственные релизы. Послушайте наши треки на удобной платформе:</p>
+                    <div class="streaming-links">
+                        <a href="https://music.yandex.ru/artist/24399111?ref_id=D9D4F7B8-3838-47B9-880E-E7EB58CEC9F2&utm_medium=copy_link" target="_blank" rel="noopener" class="stream-btn">
+                            <span class="stream-icon yandex-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.2 14.5h-1.9v-4.3c0-.3-.1-.5-.4-.5-.2 0-.5.1-.7.4l-2.3 4.4H7.8l2.7-4.8c-.9-.4-1.5-1.2-1.5-2.3 0-1.6 1.2-2.7 3.1-2.7h3.1v9.8zm-1.9-6.2V7.9h-1.1c-.9 0-1.4.4-1.4 1.2 0 .7.5 1.2 1.4 1.2h1.1z"/>
+                                </svg>
+                            </span>
+                            <span>Яндекс Музыка</span>
+                            <span class="stream-arrow">↗</span>
+                        </a>
+
+                        <a href="https://music.apple.com/us/artist/%D0%BD%D0%B0%D1%82%D1%83%D1%80%D0%B0/1822339308?l=ru" target="_blank" rel="noopener" class="stream-btn">
+                            <span class="stream-icon apple-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3z"/>
+                                </svg>
+                            </span>
+                            <span>Apple Music</span>
+                            <span class="stream-arrow">↗</span>
+                        </a>
+
+                        <a href="https://vk.ru/artist/natura_mtc1mjezndg0ma" target="_blank" rel="noopener" class="stream-btn">
+                            <span class="stream-icon vk-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486 1.801-2.339 4.157-5.336 2.073-5.336h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539-.629-.145-1.241-.205-1.809-.205-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305-.241-.548-.315-.974-1.175-.974h-3.255c-.492 0-.787.16-.787.516 0 .602 2.96 6.72 5.786 9.77 2.756 2.975 5.48 2.708 7.376 2.708z"/>
+                                </svg>
+                            </span>
+                            <span>VK Музыка</span>
+                            <span class="stream-arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ТЕХНИЧЕСКИЕ ОСОБЕННОСТИ -->
+    <section id="tech" class="section tech-section">
+        <div class="container">
+            <h2 class="section-title">Технические условия и звук</h2>
+            <p class="section-lead">Подстраиваемся под любую локацию — от оборудованного ресторана до выездной регистрации на природе.</p>
+
+            <div class="tech-grid">
+                <div class="tech-card interactive-card">
+                    <span class="tech-num">01</span>
+                    <h3>Готовая площадка</h3>
+                    <p>Если в заведении уже стоит аппарат, мы подключаемся к вашему звуковому оборудованию. Все детали по коммутации заранее согласуем со звукорежиссером в переписке.</p>
+                </div>
+
+                <div class="tech-card interactive-card">
+                    <span class="tech-num">02</span>
+                    <h3>Привезем свой звук</h3>
+                    <p>Если на площадке пусто, мы привезем полный комплект своего оборудования — включая мощные колонки, способные раскачать свадебный зал. От вас понадобятся только розетки 220В.</p>
+                </div>
+
+                <div class="tech-card interactive-card">
+                    <span class="tech-num">03</span>
+                    <h3>Автономный формат без розеток</h3>
+                    <p>Выступаем даже в парке, лесу или на теплоходе. У нас есть компактные аккумуляторные колонки. Просто предупредите об этом заранее при бронировании даты.</p>
+                </div>
+            </div>
+
+            <div class="tech-note">
+                <strong>Тайминг подготовки:</strong> на разгрузку, установку нашего оборудования и саундчек требуется около 60 минут до начала программы.
+            </div>
+        </div>
+    </section>
+
+    <!-- РЕПЕРТУАР -->
+    <section id="repertoire" class="section repertoire-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Репертуар</h2>
+                <p class="section-lead">
+                    В нашей базе более 90 проверенных песен. По вашему запросу мы также можем разучить <strong>1–2 специальные песни</strong> вне списка (если согласуем их минимум за неделю до даты выступления).
+                </p>
+            </div>
+
+            <div class="repertoire-controls">
+                <input type="text" id="song-search" class="song-search-input" placeholder="Поиск по названию песни или исполнителю (например: Кино, Земфира, Экспонат)...">
+                <div class="category-tabs" id="category-tabs">
+                    <button class="tab-btn active" data-filter="all">Все песни</button>
+                    <button class="tab-btn" data-filter="rock">Русский рок и инди</button>
+                    <button class="tab-btn" data-filter="pop">Поп / Хиты вечеринок</button>
+                    <button class="tab-btn" data-filter="misc">Разное и душевное</button>
+                    <button class="tab-btn" data-filter="eng">English</button>
+                </div>
+            </div>
+
+            <div class="repertoire-grid" id="repertoire-grid">
+                <!-- Карточки артистов генерируются в app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ И СОЦСЕТИ -->
+    <footer id="contacts" class="main-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-info">
+                    <h2 class="footer-title">Свяжитесь с нами</h2>
+                    <p>Напишите нам в удобную соцсеть или мессенджер, чтобы проверить свободную дату, обсудить тайминг и рассчитать стоимость под ваше мероприятие.</p>
+                </div>
+
+                <div class="social-grid">
+                    <a href="https://t.me/brodychiemusic" target="_blank" rel="noopener" class="social-card">
+                        <span class="social-name">Telegram-канал</span>
+                        <span class="social-handle">@brodychiemusic ↗</span>
+                    </a>
+                    <a href="https://vk.com/natura_band" target="_blank" rel="noopener" class="social-card">
+                        <span class="social-name">ВКонтакте</span>
+                        <span class="social-handle">vk.com/natura_band ↗</span>
+                    </a>
+                    <a href="https://www.instagram.com/naturaa_band" target="_blank" rel="noopener" class="social-card">
+                        <span class="social-name">Instagram *</span>
+                        <span class="social-handle">@naturaa_band ↗</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@natura.band" target="_blank" rel="noopener" class="social-card">
+                        <span class="social-name">TikTok</span>
+                        <span class="social-handle">@natura.band ↗</span>
+                    </a>
+                    <a href="https://youtube.com/channel/UCqi_jlIeb8MyqpSHsy8HY7A" target="_blank" rel="noopener" class="social-card">
+                        <span class="social-name">YouTube</span>
+                        <span class="social-handle">Канал группы ↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Группа «Натура», Санкт-Петербург</span>
+                <p class="legal-disclaimer">* Признан экстремистскими организациями и запрещены на территории РФ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
