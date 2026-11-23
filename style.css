@@ -259,7 +259,16 @@ h1, h2, h3, .logo-link, .band-title {
     border-radius: 0 0 30px 30px;
     filter: drop-shadow(0 12px 18px rgba(42, 35, 30, 0.14)) sepia(8%);
     transform-origin: bottom center;
-    transition: transform 0.5s var(--ease-spring), filter 0.4s ease;
+    
+    /* Прячем до полной загрузки */
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+    transition: opacity 0.55s ease, transform 0.5s var(--ease-spring), filter 0.4s ease;
+}
+
+.member-popout-img.is-loaded {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .member-caption {

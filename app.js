@@ -251,6 +251,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 playMemberSound(member, audioId);
             }
         });
+
+        document.querySelectorAll('.member-popout-img').forEach(img => {
+            const showImage = () => img.classList.add('is-loaded');
+            if (img.complete) {
+                showImage();
+            } else {
+                img.addEventListener('load', showImage);
+                img.addEventListener('error', showImage);
+            }
+        });
     });
 
     renderRepertoire();
