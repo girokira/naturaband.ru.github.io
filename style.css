@@ -97,7 +97,7 @@ h1, h2, h3, .logo-link, .band-title {
 .header-pill {
     pointer-events: auto;
     width: 100%;
-    max-width: 980px;
+    max-width: 1040px;
     background-color: rgba(250, 247, 242, 0.88);
     backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
@@ -131,7 +131,7 @@ h1, h2, h3, .logo-link, .band-title {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 8px;
+    gap: 6px;
 }
 
 .nav-item {
@@ -139,7 +139,7 @@ h1, h2, h3, .logo-link, .band-title {
     color: var(--text-main);
     font-size: 0.92rem;
     font-weight: 500;
-    padding: 8px 16px;
+    padding: 8px 14px;
     border-radius: var(--radius-pill);
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
 }
@@ -468,7 +468,7 @@ h1, h2, h3, .logo-link, .band-title {
     border-radius: var(--radius-pill);
     font-size: 0.92rem;
     font-weight: 600;
-    transition: transform 0.3s var(--ease-spring), background-color 0.25s ease, color 0.25s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s var(--ease-spring), background-color 0.25s ease, color 0.25s ease, box-shadow 0.3s ease, border-color 0.25s ease;
 }
 
 .btn:hover {
@@ -661,10 +661,100 @@ h1, h2, h3, .logo-link, .band-title {
 }
 
 /* --------------------------------------------- */
-/* --- 6. ТЕХНИЧЕСКИЙ РАЙДЕР --- */
+/* --- 6. ФОРМАТЫ, ТАЙМИНГ И СТОИМОСТЬ --- */
+/* --------------------------------------------- */
+.formats-section {
+    background-color: var(--bg-main);
+}
+
+.formats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.format-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.format-card h3 {
+    font-size: 1.85rem;
+    margin-bottom: 4px;
+}
+
+.format-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.96rem;
+}
+
+.format-card .format-composition {
+    color: var(--text-main);
+}
+
+.pricing-box {
+    background-color: #EDE3D2;
+    border: 1px solid #D1C2AC;
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.pricing-main {
+    max-width: 460px;
+}
+
+.price-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--text-main);
+    margin: 4px 0 8px 0;
+}
+
+.price-desc {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 1rem;
+}
+
+.pricing-legal {
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.pricing-legal p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.96rem;
+}
+
+.pricing-legal strong {
+    color: var(--text-main);
+}
+
+/* --------------------------------------------- */
+/* --- 7. ТЕХНИЧЕСКИЙ РАЙДЕР --- */
 /* --------------------------------------------- */
 .tech-section {
-    background-color: var(--bg-main);
+    background-color: var(--bg-alt);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .tech-grid {
@@ -712,18 +802,17 @@ h1, h2, h3, .logo-link, .band-title {
 .tech-note {
     margin-top: 28px;
     padding: 18px 26px;
-    background-color: var(--bg-alt);
+    background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 20px;
     font-size: 0.95rem;
 }
 
 /* --------------------------------------------- */
-/* --- 7. РЕПЕРТУАР --- */
+/* --- 8. РЕПЕРТУАР --- */
 /* --------------------------------------------- */
 .repertoire-section {
-    background-color: var(--bg-alt);
-    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-main);
 }
 
 .repertoire-controls {
@@ -828,7 +917,7 @@ h1, h2, h3, .logo-link, .band-title {
 }
 
 /* --------------------------------------------- */
-/* --- 8. ПОДВАЛ, СОЦСЕТИ И СНОСКА --- */
+/* --- 9. ПОДВАЛ, СОЦСЕТИ И СНОСКА --- */
 /* --------------------------------------------- */
 .main-footer {
     background-color: #26201B;
@@ -856,6 +945,25 @@ h1, h2, h3, .logo-link, .band-title {
 .footer-info p {
     color: #B8ACA0;
     font-size: 1rem;
+}
+
+.direct-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.main-footer .btn-outline {
+    background-color: #332B25;
+    color: var(--bg-main);
+    border: 1px solid #594D43;
+}
+
+.main-footer .btn-outline:hover {
+    background-color: var(--bg-main);
+    color: #26201B;
+    border-color: var(--bg-main);
 }
 
 .social-grid {
@@ -911,11 +1019,12 @@ h1, h2, h3, .logo-link, .band-title {
 }
 
 /* --------------------------------------------- */
-/* --- 9. АДАПТИВНОСТЬ (МОБИЛЬНЫЕ) --- */
+/* --- 10. АДАПТИВНОСТЬ (МОБИЛЬНЫЕ) --- */
 /* --------------------------------------------- */
 @media (max-width: 900px) {
     .live-videos-grid,
     .about-grid,
+    .formats-grid,
     .tech-grid,
     .footer-inner {
         grid-template-columns: 1fr;
@@ -974,7 +1083,12 @@ h1, h2, h3, .logo-link, .band-title {
         font-size: 2.3rem;
     }
 
-    .featured-video-block {
-        padding: 20px;
+    .featured-video-block,
+    .pricing-box {
+        padding: 24px;
+    }
+
+    .price-value {
+        font-size: 2.4rem;
     }
 }
